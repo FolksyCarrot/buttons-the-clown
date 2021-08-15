@@ -1,0 +1,37 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "name": "Mike Loblonski"
+        }, {
+            "id": 2,
+            "name": "Leslie Ross"
+        }
+    ],
+
+    "partyRequest": [
+        {
+         "id": 1,
+         "parentName": "Josh Pulley",
+         "childName": "Gus",
+         "numOfChildren": 2,
+         "address": "1230 Fake Address Lane",
+         "date": "October 32, 2018",
+         "lengthOfPartyInHours": 2.5
+            
+        }
+    ], 
+    
+    "employeeSignUp": [
+        {
+            "id": 1,
+            "partyId": 1,
+            "employeeId": 2,
+            "partyOver": true
+
+        }
+        
+    ]
+
+    
+}
