@@ -30,9 +30,6 @@ export const renderHtml = () => {
   </div>`
 }
 
-export function transientObject = () => {
-  document.querySelector
-}
 
 //function that returns an object with the properties listed below. each property needs to be value of specific input. document.queryselector('#parent').value
 
