@@ -1,7 +1,7 @@
 const mainContainer = document.querySelector("#mainContainer")
 
 export const renderHtml = () => {
-  return `<div>
+  return `<h1>Request A Party</h1><div>
     <label for="say">Parent Name</label>
     <input name="parentName" id="parent" value="">
   </div>
@@ -26,7 +26,7 @@ export const renderHtml = () => {
     <input name="lengthOfParty" id="party" value="">
   </div>
   <div>
-    <button>Send my greetings</button>
+    <button class="button" id="partyRequestButton">Send my greetings</button>
   </div>`
 }
 
