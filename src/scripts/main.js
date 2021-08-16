@@ -2,4 +2,11 @@ import { renderHtml } from "./partyRequestForm.js";
 
 const mainContainer = document.querySelector("#mainContainer")
 
-mainContainer.innerHTML = renderHtml()
+const render = () => {
+    mainContainer.innerHTML = renderHtml()
+}
+
+render()
+
+mainContainer.addEventListener("stateChanged", 
+(event) => render())

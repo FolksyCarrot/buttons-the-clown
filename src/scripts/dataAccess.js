@@ -49,7 +49,7 @@ export const postPartyForm = (userPartyRequest) => {
     }
 
 
-    return fetch(`${API}/request`, fetchOptions)
+    return fetch(`${API}/partyRequest`, fetchOptions)
         .then(response => response.json())
         .then(() => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
