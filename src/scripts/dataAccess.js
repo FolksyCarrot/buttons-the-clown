@@ -5,6 +5,8 @@ const applicationState = {
 }
 const API = "http://localhost:8088"
 
+const mainContainer = document.querySelector("#mainContainer")
+
 export const fetchRequests = () => {
     return fetch (`${API}/request`)
         .then (response => response.json())
@@ -35,6 +37,23 @@ export const fetchEmployees = () => {
                 applicationState.employees= employee
             }
             )
+}
+
+export const postPartyForm = (userPartyRequest) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userPartyRequest)
+    }
+
+
+    return fetch(`${API}/request`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+        })
 }
 
 
