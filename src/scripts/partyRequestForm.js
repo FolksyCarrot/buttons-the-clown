@@ -23,7 +23,7 @@ export const renderHtml = () => {
   </div>
   <div>
     <label for="to">LengthOfParty</label>
-    <input name="dateOfParty" id="party" value="">
+    <input name="lengthOfParty" id="party" value="">
   </div>
   <div>
     <button>Send my greetings</button>
