@@ -8,7 +8,7 @@ const API = "http://localhost:8088"
 const mainContainer = document.querySelector("#mainContainer")
 
 export const fetchRequests = () => {
-    return fetch (`${API}/request`)
+    return fetch (`${API}/partyRequest`)
         .then (response => response.json())
         .then (
             (serviceRequest) => {
