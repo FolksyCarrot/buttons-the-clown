@@ -1,6 +1,5 @@
 import { postPartyForm } from "./dataAccess.js"
-
-const mainContainer = document.querySelector("#mainContainer")
+import { renderEmployees } from "./employees.js"
 
 document.addEventListener("click", 
   (event) => {
@@ -54,23 +53,12 @@ export const renderHtml = () => {
     <input type="number" name="lengthOfParty" id="party" value="">
   </div>
   <div>
-    <button class="button" id="partyRequestButton">Send my greetings</button>
-  </div>`
+    <button class="button" id="partyRequestButton">Start My Party</button>
+  </div>
+  ${renderEmployees()}`
 }
 
 
-//function that returns an object with the properties listed below. each property needs to be value of specific input. document.queryselector('#parent').value
-
-
-
-
-        // "id": 1,
-        //  "parentName": "Josh Pulley",
-        //  "childName": "Gus",
-        //  "numOfChildren": 2,
-        //  "address": "1230 Fake Address Lane",
-        //  "date": "October 32, 2018",
-        //  "lengthOfPartyInHours": 2.5
 
 
 

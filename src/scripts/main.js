@@ -7,7 +7,7 @@ const render = () => {
     fetchRequests()
     fetchEmployeeSignUp()
     fetchEmployees()
-    mainContainer.innerHTML = renderHtml()
+   .then(() =>  mainContainer.innerHTML = renderHtml() )
 }
 
 render()

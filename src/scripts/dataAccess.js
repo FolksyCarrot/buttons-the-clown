@@ -13,6 +13,7 @@ export const fetchRequests = () => {
         .then (
             (serviceRequest) => {
                 applicationState.request= serviceRequest
+                
             }
             )
 }
@@ -35,8 +36,10 @@ export const fetchEmployees = () => {
         .then (
             (employee) => {
                 applicationState.employees= employee
+                console.log(employee)
             }
             )
+           
 }
 
 export const postPartyForm = (userPartyRequest) => {
