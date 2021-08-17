@@ -1,5 +1,6 @@
 import { postPartyForm } from "./dataAccess.js"
-import { renderEmployees } from "./employees.js"
+
+import { partyRequests } from "./partyRequest.js"
 
 document.addEventListener("click", 
   (event) => {
@@ -55,7 +56,10 @@ export const renderHtml = () => {
   <div>
     <button class="button" id="partyRequestButton">Start My Party</button>
   </div>
-  ${renderEmployees()}`
+  <div>
+    ${partyRequests()}
+  </div>
+  `
 }
 
 
