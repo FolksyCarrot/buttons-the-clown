@@ -35,6 +35,20 @@
       "partyId": 1,
       "employeeId": 2,
       "partyOver": true
+    },
+    {
+      "employeeName": {
+        "id": 1,
+        "name": "Mike Loblonski"
+      },
+      "id": 2
+    },
+    {
+      "employeeName": {
+        "id": 1,
+        "name": "Mike Loblonski"
+      },
+      "id": 3
     }
   ]
 }

@@ -23,12 +23,3 @@ export const partyRequests = () => {
 
 
 
-// export const partyRequests = () => {
-//     const request = getRequests()
-//     let html = "<h2>Party Requests</h2><ul>"
-//     for (const party of request) {
-//         html += `${party.map((request) => {`<li>${request}</li>`}).join("")}`
-//     html += "</ul>"
-//     return html
-// }
-// }
