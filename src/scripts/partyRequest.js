@@ -1,6 +1,9 @@
 import { getRequests } from "./dataAccess.js";
 import { renderEmployees } from "./employees.js";
 
+
+/// do a .find method
+
 export const partyRequests = () => {
     const request = getRequests()
     let html = "<h2>Party Requests</h2>"
@@ -13,7 +16,7 @@ export const partyRequests = () => {
         <li>${party.address}</li>
         <li>${party.date}</li>
         <li>${party.lengthOfPartyInHours}</li>
-        ${renderEmployees()}
+        ${renderEmployees(party.id)}
         </ul>
         `
     }

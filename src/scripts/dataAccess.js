@@ -1,7 +1,10 @@
 const applicationState = {
     request:[],
     employeeSignUp: [],
-    employees: []
+    employees: [],
+    employeeValueId: {
+        employeeId: 0
+    }
 }
 const API = "http://localhost:8088"
 
@@ -82,3 +85,7 @@ export const postEmployeeSignUp = (userEmployeeRequest) => {
 export const getRequests = () => applicationState.request.map(requests => ({...requests}))
 export const getEmployeeSignUp = () => applicationState.employeeSignUp.map(signUp => ({...signUp}))
 export const getEmployees = () => applicationState.employees.map(employee => ({...employee}))
+export const getEmployeeValueId = () => applicationState.employeeValueId
+
+
+export const setEmployeeValueId = (id) => applicationState.employeeValueId.employeeId = id

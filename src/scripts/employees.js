@@ -1,16 +1,24 @@
-import { getEmployees, postEmployeeSignUp } from "./dataAccess.js";
+import { getEmployees, postEmployeeSignUp, setEmployeeValueId, getEmployeeValueId } from "./dataAccess.js";
 
 const mainContainer = document.querySelector("#mainContainer")
 
+document.addEventListener("change", 
+(changeEvent) => {
+    if(changeEvent.target.id === "employeeSelection")
+    setEmployeeValueId(parseInt(changeEvent.target.value))
+})
+
 mainContainer.addEventListener("click", 
-(event) => {
+(event) => { 
+    const partyId = parseInt(event.target.name)
     const employees = getEmployees()
+    const employeeValueId = getEmployeeValueId()
     if (event.target.id === "employeeSubmitButton") {
-        const idOfEmployee = parseInt(document.querySelector("#employeeSelection").value)
-        const foundEmployee = employees.find( (employee) => employee.id === idOfEmployee)
+        const foundEmployee = employees.find( (employee) => employee.id === employeeValueId.employeeId)
 
         const sendEmployeeNameToAPI = {
-            employeeName: foundEmployee
+            partyId: partyId,
+            employeeName: foundEmployee.name
         }
         
         postEmployeeSignUp(sendEmployeeNameToAPI)
@@ -20,13 +28,14 @@ mainContainer.addEventListener("click",
 
 
 
-export const renderEmployees = () => {
+export const renderEmployees = (id) => {
     const employees = getEmployees()
     let html = "<select id='employeeSelection'><option disabled selected value> -- Select employee -- </option>"
     for (const employee of employees) {
         html += `<option value="${employee.id}"> ${employee.name} </option>` 
     }
     html += "</select>"
-    html +="<button class='button' id= 'employeeSubmitButton'>button</button>"
+    html += `<button class='button' name="${id}" id= 'employeeSubmitButton'>button</button>`
+  
     return html
 }

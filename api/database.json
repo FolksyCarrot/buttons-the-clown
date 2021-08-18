@@ -27,6 +27,15 @@
       "date": "2021-10-29",
       "lengthOfPartyInHours": "8",
       "id": 2
+    },
+    {
+      "parentName": "sdf",
+      "childName": "sdf",
+      "numOfChildren": "3",
+      "address": "adf",
+      "date": "2021-08-28",
+      "lengthOfPartyInHours": "3",
+      "id": 3
     }
   ],
   "employeeSignUp": [
@@ -37,18 +46,9 @@
       "partyOver": true
     },
     {
-      "employeeName": {
-        "id": 1,
-        "name": "Mike Loblonski"
-      },
+      "partyId": 2,
+      "employeeName": "Leslie Ross",
       "id": 2
-    },
-    {
-      "employeeName": {
-        "id": 1,
-        "name": "Mike Loblonski"
-      },
-      "id": 3
     }
   ]
 }
