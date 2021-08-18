@@ -1,8 +1,8 @@
 import { getRequests } from "./dataAccess.js";
 import { renderEmployees } from "./employees.js";
+import { employeeSignUp } from "./signUp.js";
 
 
-/// do a .find method
 
 export const partyRequests = () => {
     const request = getRequests()
@@ -17,10 +17,12 @@ export const partyRequests = () => {
         <li>${party.date}</li>
         <li>${party.lengthOfPartyInHours}</li>
         ${renderEmployees(party.id)}
-        </ul>
-        `
+        </ul>`
+        
     }
-   
+    
+    //take this part out of the for loop
+    html += `<div>${employeeSignUp()}</div>`
     return html
 }
 

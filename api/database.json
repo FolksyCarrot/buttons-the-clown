@@ -40,15 +40,19 @@
   ],
   "employeeSignUp": [
     {
-      "id": 1,
-      "partyId": 1,
-      "employeeId": 2,
-      "partyOver": true
-    },
-    {
       "partyId": 2,
       "employeeName": "Leslie Ross",
       "id": 2
+    },
+    {
+      "partyId": 2,
+      "employeeName": "Mike Loblonski",
+      "id": 3
+    },
+    {
+      "partyId": 3,
+      "employeeName": "Leslie Ross",
+      "id": 4
     }
   ]
 }
