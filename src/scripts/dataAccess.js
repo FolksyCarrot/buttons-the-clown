@@ -79,6 +79,13 @@ export const postEmployeeSignUp = (userEmployeeRequest) => {
         })
 }
 
+export const deletePartyRequests = (id) => {
+    return fetch(`${API}/partyRequest/${id}`, { method: "DELETE" })
+    .then(() => {
+        mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+    })
+}
+
 
 
 
