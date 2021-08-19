@@ -5,10 +5,12 @@ export const employeeSignUp = () => {
     let html = "<h2>Employee Shift</h2>"
     for (const individualShift of signUp) {
         html += `<ul>
-         <li> partyId:${individualShift.partyId}
-          employeeName: ${individualShift.employeeName} </li>
+         <li> Party Id:${individualShift.partyId}<br>
+          Employee Name: ${individualShift.employeeName} </li>
          </ul>`
     }
     
     return html
 }
+
+
